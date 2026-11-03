@@ -4,7 +4,12 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
     <article className="card">
       <div className="card-art">
-        <img src={recipe.image} alt={recipe.title} />
+        <img
+  src={recipe.image}
+  alt={recipe.title}
+  loading="lazy"
+  decoding="async"
+/>
         <span className="card-number">THE RECIPE COLLECTION</span>
       </div>
 
