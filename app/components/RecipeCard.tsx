@@ -1,25 +1,29 @@
+
+import Link from "next/link";
 import type { Recipe } from "../data/recipes";
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
-    <article className="card">
-      <div className="card-art">
-        <img src={recipe.image} alt={recipe.title} />
-        <span className="card-number">THE RECIPE COLLECTION</span>
-      </div>
-
-      <div className="card-info">
-        <div>
-          <span className="card-cuisine">{recipe.cuisine}</span>
-          <h3>{recipe.title}</h3>
+    <Link href={`/recipe/${recipe.id}`} className="card-link">
+      <article className="card">
+        <div className="card-art">
+          <img src={recipe.image} alt={recipe.title} />
+          <span className="card-number">NEXTBITES</span>
         </div>
-        <span className="card-arrow">↗</span>
-      </div>
 
-      <div className="card-meta">
-        <span>{recipe.minutes} MIN</span>
-        <span>{recipe.difficulty.toUpperCase()}</span>
-      </div>
-    </article>
+        <div className="card-info">
+          <p className="card-cuisine">{recipe.cuisine}</p>
+          <h3>{recipe.title}</h3>
+          <p className="card-description">{recipe.description}</p>
+
+          <div className="card-meta">
+            <span>{recipe.minutes} min</span>
+            <span>{recipe.difficulty}</span>
+          </div>
+
+          <span className="card-arrow">Discover recipe →</span>
+        </div>
+      </article>
+    </Link>
   );
 }
