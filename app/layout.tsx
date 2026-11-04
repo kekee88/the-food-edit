@@ -14,9 +14,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav>
-          <h2>🍴 NextBites</h2>
-        </nav>
+      <nav aria-label="Main navigation">
+  <a href="/" className="logo">
+    🍴 NextBites
+  </a>
+</nav>
         {children}
       </body>
     </html>
