@@ -4,7 +4,10 @@ import type { Recipe } from "../data/recipes";
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
-    <Link href={`/recipe/${recipe.id}`} className="card-link">
+    <Link
+      href={`/the-food-edit/recipe/${recipe.id}/`}
+      className="card-link"
+    >
       <article className="card">
         <div className="card-art">
           <img src={recipe.image} alt={recipe.title} />

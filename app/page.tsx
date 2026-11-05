@@ -7,10 +7,12 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a href="/" className="logo">NextBites.</a>
+        <a href="/the-food-edit/" className="logo">
+          NextBites.
+        </a>
 
         <nav className="site-nav">
-          <a href="/">Home</a>
+          <a href="/the-food-edit/">Home</a>
           <a href="#recipes">Recipes</a>
           <a href="#about">Our Story</a>
         </nav>

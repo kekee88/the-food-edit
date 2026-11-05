@@ -1,9 +1,10 @@
+
 import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NextBites",
-  description: "Discover your next favourite recipe",
+  title: "NextBites | Quick Recipes You'll Actually Cook",
+  description: "Discover delicious, easy-to-follow recipes with NextBites.",
 };
 
 export default function RootLayout({
@@ -14,11 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <nav aria-label="Main navigation">
-  <a href="/" className="logo">
-    🍴 NextBites
-  </a>
-</nav>
+        <nav aria-label="Main navigation">
+          <a href="/" className="logo">
+            🍴 NextBites
+          </a>
+        </nav>
         {children}
       </body>
     </html>
